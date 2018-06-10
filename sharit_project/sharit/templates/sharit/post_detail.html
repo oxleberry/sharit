@@ -1,0 +1,24 @@
+
+{% extends 'sharit/base.html' %}
+
+{% block content %}
+<!-- <h2>{{ post.title }} <a href="">(edit)</a></h2> -->
+<h2>{{ post.title }}</h2>
+<h4>{{ post.topic }}</h4>
+<h4>{{ post.created_post }}</h4>
+<!-- <h4>{{ post.link }}</h4> -->
+<iframe width="560" height="315" src="https://www.youtube.com/embed/{{ post.link }}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+<!-- <img src="{{ artist.photo_url }}" alt=""> -->
+
+<h3>Comment <a href="">(+)</a></h3>
+<!-- <ul>
+    {% for comment in post.comments.all %}
+    <li>
+      <p>{{ comment.text }}</p>
+      <p>{{ comment.created_comment }}</p>
+    </li>
+    {% endfor %}
+</ul> -->
+<a href="">Delete Artist</a>
+{% endblock %}
