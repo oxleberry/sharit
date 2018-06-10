@@ -3,11 +3,11 @@
 
 {% block content %}
 <!-- <h2>{{ post.title }} <a href="">(edit)</a></h2> -->
-<h2>{{ post.title }}</h2>
+<h2>{{ post.title }}<a href="{% url 'post_edit' pk=post.pk  %}"> (edit)</a></h2>
 <h4>{{ post.topic }}</h4>
 <h4>{{ post.created_post }}</h4>
 <!-- <h4>{{ post.link }}</h4> -->
-<iframe width="560" height="315" src="https://www.youtube.com/embed/{{ post.link }}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/{{ small_link }}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 <!-- <img src="{{ artist.photo_url }}" alt=""> -->
 
@@ -20,5 +20,5 @@
     </li>
     {% endfor %}
 </ul> -->
-<a href="">Delete Artist</a>
+<a href="{% url 'post_delete' pk=post.pk %}">Delete Artist</a>
 {% endblock %}
