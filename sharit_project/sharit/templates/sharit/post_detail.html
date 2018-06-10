@@ -3,22 +3,26 @@
 
 {% block content %}
 <!-- <h2>{{ post.title }} <a href="">(edit)</a></h2> -->
-<h2>{{ post.title }}<a href="{% url 'post_edit' pk=post.pk  %}"> (edit)</a></h2>
-<h4>{{ post.topic }}</h4>
-<h4>{{ post.created_post }}</h4>
+<h2>{{ post.title }}<a href="{% url 'post_edit' pk=post.pk %}"> (edit)</a></h2>
+<h3>Topic: {{ post.topic }}</h3>
+<p><small>{{ post.created_post }}</small></p>
 <!-- <h4>{{ post.link }}</h4> -->
 <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ small_link }}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 <!-- <img src="{{ artist.photo_url }}" alt=""> -->
 
-<h3>Comment <a href="">(+)</a></h3>
-<!-- <ul>
+<h3>Comment <a href="{% url 'comment_create' %}">(+)</a></h3>
+<ul>
     {% for comment in post.comments.all %}
+    <hr />
     <li>
-      <p>{{ comment.text }}</p>
-      <p>{{ comment.created_comment }}</p>
+        <a class="bold" href="{% url 'comment_detail' pk=comment.pk %}">{{ comment.text }}</a>
+        <small>{{ comment.created_comment }}</small>
+    </li>
+    <li>
+        <a href="{% url 'comment_create' %}"><small> add comment</small></a>
     </li>
     {% endfor %}
-</ul> -->
+</ul>
 <a href="{% url 'post_delete' pk=post.pk %}">Delete Artist</a>
 {% endblock %}

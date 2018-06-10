@@ -1,0 +1,18 @@
+
+{% extends 'sharit/base.html' %}
+
+{% block content %}
+<!-- <h2>
+    <a href="">{{ comment.post }}</a>
+    <a href="">(edit)</a>
+</h2> -->
+<h2>
+    <a href="{% url 'post_list' %}">{{ comment.post }}</a>
+    <a href="{% url 'post_list' %}">(edit)</a>
+</h2>
+<h4>Comment: {{ comment.text }}</h4>
+
+
+<a href="{% url 'comment_delete' pk=comment.pk %}">Delete</a>
+
+{% endblock %}

@@ -1,0 +1,20 @@
+
+{% extends 'sharit/base.html' %}
+
+{% block content %}
+<h2>Comments <a href="">(+)</a></h2>
+<ul>
+    {% for comment in comments %}
+    <hr />
+    <li class="bold">
+        <a href="">{{ comment.post }}</a>
+    </li>
+    <li>
+        <a href="">{{ comment.text }}</a>
+    </li>
+    <li>
+      <small>{{ comment.created_comment }}</small>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}
