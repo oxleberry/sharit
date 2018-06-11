@@ -71,6 +71,9 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'sharit_project.wsgi.application'
 
+# # LOGIN
+# LOGIN_REDIRECT_URL = '/'
+
 
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases

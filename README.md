@@ -1,2 +1,2 @@
 # sharit
-a news posting app
+a video sharing app

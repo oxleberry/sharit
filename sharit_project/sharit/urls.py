@@ -1,4 +1,7 @@
 
+
+# from django.conf.urls import url
+
 from django.urls import path
 from . import views
 
@@ -7,6 +10,9 @@ urlpatterns = [
     # path('', views.hello_world),
     # if we go to '/', go to the views, run the artist_list function.
     # third argument is naming this path.
+    path('signup', views.signup, name='signup'),
+    path('login', views.login_user, name='login'),
+    path('logout_user', views.logout_user, name='logout_user'),    
     path('', views.post_list, name='post_list'),
     path('posts/<int:pk>', views.post_detail, name='post_detail'),
     path('posts/new', views.post_create, name='post_create'),

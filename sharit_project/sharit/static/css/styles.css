@@ -23,3 +23,14 @@ a {
     font-size: 1.2em;
     font-weight: 600;
 }
+
+nav a {
+    padding: 1em;
+    border: 2px solid pink;
+    border-radius: .5em;
+}
+
+nav a:hover {
+    background-color: orange;
+    color: blue;
+}
