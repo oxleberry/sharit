@@ -5,17 +5,16 @@
     <head>
         <title>Sharit</title>
         <link rel="stylesheet" href="{% static 'css/styles.css' %}">
-
     </head>
     <body>
         <a href="{% url 'post_list' %}"><h1>Sharit</h1></a>
-        <h3>A video sharing app</h3>
+        <h2>A video sharing app</h2>
+        <h3 class="name-text">Welcome, {{user.username}}!</h3>
         <nav>
-            <a class="sh_btn" href="/comments">Comments</a>
             <a href="/">Posts</a>
+            <a class="sh_btn" href="/comments">Comments</a>
             {% if user.is_authenticated %}
               <a href="{% url 'logout_user' %}"> Logout</a>
-              <p>Welcome, {{user.username}}!</p>
 
             {% else %}
               <a href="{% url 'signup' %}"> Sign Up </a>

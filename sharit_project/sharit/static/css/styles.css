@@ -15,8 +15,18 @@ li {
     line-height: 1.5em;
 }
 
+h1 {
+    font-size: 4em;
+    margin-bottom: 0em;
+}
+
 a {
     text-decoration: none;
+    color: #541b8b;
+}
+
+a:visited,  {
+    color: #541b8b;
 }
 
 .bold {
@@ -24,13 +34,43 @@ a {
     font-weight: 600;
 }
 
-nav a {
+nav a, button {
     padding: 1em;
-    border: 2px solid pink;
+    border: 2px solid #e5d8f1;
     border-radius: .5em;
+    margin-right: 1em;
+    font-size: 1em;
+    /* border-color: white; */
 }
 
-nav a:hover {
-    background-color: orange;
-    color: blue;
+nav a:hover, button:hover {
+    background-color: #e5d8f1;
+    /* color: blue; */
+}
+
+nav {
+    margin: 2em 0;
+}
+
+.name-text, footer {
+    color: #9d69cd;
+}
+
+input {
+    display: block;
+    margin: 5px 0 20px 0;
+    padding: 9px;
+    border: solid 1px black;
+    width: 300px;
+    background: whitesmoke;
+}
+
+input[type=submit],
+a.delete {
+    width: auto;
+    padding: 9px 15px;
+    background-color: gray;
+    border: 0;
+    font-size: 14px;
+    color: #FFFFFF;
 }
